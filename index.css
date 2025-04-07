@@ -1,0 +1,669 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;800&display=swap');
+
+
+.dark-theme-variables {
+    box-shadow: 0 10px 10px 0 rgba(245, 242, 242, 0.925);   
+    .container{
+        background-color: #181a1e;
+    }
+
+    aside  .top {
+        background-color: #181a1e;
+        color: white;
+    }
+    .sidebar{
+        background-color: #181a1e; 
+    }
+   h1{
+    color: white;
+   }
+   h2{
+    color: white;
+   }
+   h3{
+    color: white;
+   }
+   h4{
+    color: white;
+   }
+   .sales{
+    background-color: #41454b;
+   }
+   .expensses{
+    background-color: #50555f;
+   }
+   .income{
+    background-color: #50555f;
+   }
+   .text-muted{
+    color: #cbcbcb;
+   }
+   .recent-orders table{
+    background-color: #50555f;
+   }
+   .right .recent-update .updates{
+    background-color: #50555f;
+   }
+   .info{
+    color: white;
+   }
+   .right .sales-analytics .item{
+    background-color: #50555f;
+   }
+
+  }
+
+ 
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+   box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+}
+body{
+height: 100vh;
+width: 100vw;
+font-family: poppins,sans-serif;
+font-size: 0.88rem;
+background-color: aliceblue;
+user-select: none;
+overflow-x: hidden;
+
+}
+a{
+   color: black;
+
+}
+img{
+    display: block;
+    width: 100%;
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.87rem;
+}
+h4{
+    font-size: 0.78rem;
+}
+h5{
+    font-size: 0.75rem;
+}
+small{
+    font-size: 0.75rem;
+}
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.text-muted{
+font-weight: 400;
+
+}
+.container{
+    display: grid;
+    width: 97%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+
+.primary{
+color: blueviolet;
+}
+.danger{
+    color: lightcoral;
+}
+.success{
+    color: goldenrod;
+}
+.warning{
+    color: yellow;
+}
+
+aside{
+height: 100vh;
+
+}
+
+
+aside  .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+    background-color: white;
+}
+aside .logo{
+    display: flex;
+    gap: 0.8rem;
+}
+aside .logo img{
+    width: 2rem;
+    height: 2rem;
+}
+aside .top div.close span{
+    display: none;
+}
+
+/* sidebarr */
+
+aside .sidebar{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+
+}
+ aside h3{
+    font-weight: 500;
+ }
+ aside .sidebar a{
+     display: flex;
+    color: gray;
+    margin-left: 2rem;
+gap: 1rem;
+align-items: center;
+position: relative;
+height: 3.7rem;
+transition: all 300ms ease;  
+}
+
+aside .sidebar a span{
+    font-size: 1.7rem;
+    transition: all 250ms ease;
+}
+
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+aside .sidebar a.active{
+    background-color: lightblue;
+    margin-left: 0;
+}
+aside .sidebar a.active:before{
+    content:'';
+    width: 6px;
+    height: 100%;
+    background-color: darkblue;
+}
+
+
+aside .sidebar a.active span{
+    color: blue;
+    margin-left: calc(1rem-3px);
+   
+}
+ 
+ aside .sidebar a:hover span{
+    margin-left: 1rem;
+
+ }
+
+ aside .sidebar .msg-count{
+ background-color: rgba(255, 47, 0, 0.866);
+ color: white;
+ padding: 1px 10px;
+ height: 35px;
+ border-radius: 80px;
+ }
+
+ /*----------main section---------------*/
+ main{
+    margin-top: 1.3rem;
+ }
+main .date{
+    display: inline-block;
+    background-color: beige;
+    border-radius: 34px;
+    margin-top: 1rem;
+    padding: 0.5rem 1.6rem;
+}
+ main .date input[type='date']{
+    background-color: transparent;
+    color: black;
+ }
+
+ main .insights{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+ } 
+
+ main .insights > div{
+    background-color: white; 
+    padding: 1rem 1rem;
+    border-radius: 25px;
+    margin-top: 1rem;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+    transition: all 250ms ease;
+}
+main .insights > div:hover{
+    box-shadow: none;
+}
+
+main .insights > div span{
+    background-color: blue;
+    padding: 0.5rem;
+    border-radius: 50px;
+    color: white;
+    font-size: 2rem;
+}
+main .insights > div.expensses span{
+    background-color: rgb(245, 94, 177);
+}
+main .insights > div.income span{
+    background-color: rgb(47, 143, 47);
+}
+main .insights > div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .insights h3{
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+}
+main .insights .progress{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50px;
+}
+
+main .insights svg {
+    
+    width: 7rem;
+    height: 7rem;
+}
+main .insights svg circle{
+    fill: none;
+    stroke: blue;
+    stroke-width: 12px;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+main .insights .sales svg circle{
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+main .insights .expensses svg circle{
+    stroke-dashoffset: 20;
+    stroke-dasharray: 80;
+}
+main .insights .income svg circle{
+    stroke-dashoffset: 35;
+    stroke-dasharray: 110;
+}
+ main .insights .progress .number{
+    position: absolute;
+    top: 0;
+    left: 0 ;
+    padding-top:29px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+   font-size: large;
+   font-weight: 800;
+ }
+main .insights small{
+    margin-top: 1.3rem;
+    display: block;
+}
+
+
+/* table orders */
+
+main .recent-orders{
+    margin-top: 2rem;
+}
+main .recent-orders h2{
+    margin-bottom: 1.5rem;
+}
+main .recent-orders table {
+    background-color: white;
+    border-radius: 25px;
+    width: 100%;
+    padding: 23px ;
+    text-align: center;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+    transition: all 300ms ease;
+}
+main .recent-orders table:hover{
+    box-shadow: none;
+}
+main table tbody td{
+    height: 2.8rem;
+    border-bottom: 1px solid lightblue;
+    color: rgb(44, 42, 42);
+    font-weight: 600;
+}
+main table tbody tr:last-child td{
+    border: none;
+}
+main .recent-orders a{
+    text-align: center;
+    margin: 1rem auto;
+    display: block;
+    color: rgb(170, 160, 160);
+}
+/* 
+---------right section---------- */
+
+.right{
+    margin-top: 1.4rem;
+}
+.right .top{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+    
+}
+.right .top button{
+    display: none;
+}
+.right .theme-toggler{
+    background-color: lightblue;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.right .theme-toggler span{
+    font-size: 1.2rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right .theme-toggler span.active{
+    background-color: rgb(61, 128, 204);
+    color: white;
+    border-radius: 25px;
+}
+.right .top .profile{
+    display: flex;
+    gap: 2rem;
+    text-align: right;
+}
+
+
+/*--------------recent update------- */
+
+.right .recent-update{
+    margin-top: 1.4rem;
+}
+.right .recent-update h2{
+    margin-bottom: 0.8rem;
+}
+
+.right .recent-update .updates{
+    background-color: white;
+    padding: 23px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px 0 rgb(0, 0, 0,0.2);
+    transition: all 300ms  ease;
+}
+.right .recent-update .updates:hover{
+    box-shadow: none;
+}
+.right .recent-update .updates .update{
+    display: grid;
+    grid-template-columns: 3.6rem auto;
+    gap: 1 rem;
+     margin-bottom: 1rem ;
+}
+/* 
+sales analytics------------------------ */
+.right .sales-analytics{
+    margin-top: 1.4rem;
+
+}
+.right .sales-analytics h2{
+    margin-bottom: 0.8rem;
+}
+
+.right .sales-analytics .item{
+    background-color: white;
+    display: flex;
+ 
+    align-items: center;
+    gap: 1.8rem;
+    margin-bottom: 1rem;
+    padding: 17px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px 0 rgb(0, 0, 0,0.2);
+    transition: all 300ms  ease;
+}
+.right .sales-analytics .item:hover{
+    box-shadow: none;
+}
+.right .sales-analytics .item .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 2.5rem;
+    width: 100%;
+    margin: 0;
+}
+.right .sales-analytics .item .icon{
+    background-color: rgb(10, 128, 201);
+    padding: 5px;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+
+}
+
+.right .sales-analytics .item.offline .icon{
+    background-color: rgb(230, 141, 156);
+
+}
+.right .sales-analytics .item.customer .icon{
+    background-color: rgb(15, 129, 15);
+}
+.right .sales-analytics .add-product{
+    background-color: transparent;
+    border: dashed 1px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px;
+    color: rgb(80, 80, 231);
+    box-shadow: 0 10px 10px 0 rgb(0, 0, 0,0.2);
+    transition: all 300ms  ease;
+}
+
+.right .sales-analytics .add-product:hover{
+    box-shadow: none;
+}
+    
+
+.right .sales-analytics .add-product div{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.right .sales-analytics .add-product h3{
+    font-weight: 600;
+}
+
+
+/* **********8
+MEDIA QUERY
+****************/
+
+@media screen and (max-width:1200px) {
+    .container{
+      width: 94%;
+      grid-template-columns: 7rem auto 14rem;
+    }
+    aside .sidebar h3{
+      display: none;
+    }
+    aside .sidebar a{
+      width: 5.6rem;
+    }
+    aside .sidebar a:last-child{
+      position: relative;
+      margin-top: 1.8rem;
+    }
+    main .insights{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+    }
+    aside .top div.close span{
+        display: none;
+    }
+}
+
+/* MEDIA QUERY PHONE
+************************/ 
+
+@media screen and (max-width:768px) {
+  .container{
+    width: 100%;
+    grid-template-columns: repeat(1,1fr);
+  
+  }
+  
+  aside{
+    position: fixed;
+    width: 18rem;
+    z-index: 3;
+    height: 100vh;
+    background-color: var(--clr-white);
+    display: none;
+    left: -110px;
+    animation:  menuLeft .3s ease forwards;
+  }
+  
+  @keyframes menuLeft {
+      to{
+        left: 0;
+      }
+  }
+  
+
+
+
+  aside .logo h2{
+       display: inline;
+  }
+  aside .sidebar h3{
+    display: inline;
+  }
+  aside .sidebar a{
+    width: 100%;
+    height: 3.4rem;
+  }
+  aside .top div.close span{
+     display: inline;
+     position: absolute;
+     right: 0;
+     margin-right:30px;
+     font-size: 35px;
+     cursor: pointer;
+     
+  }
+
+    .right .top{
+       position: fixed;
+       top: 0;
+       left: 0;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 0 0.8rem;
+       background: white;
+       height: 4.6rem;
+       width: 100%;
+       z-index: 2;
+       box-shadow: 0 10px 10px 0 rgb(0, 0, 0,0.2);
+       margin: 0;
+    }
+
+
+ main .insights{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  gap: 1.6rem;
+  padding: 40px;
+ }
+ main .recent_order{
+  padding: 30px;
+  margin: 0 auto;
+ }
+h1{
+    margin-top: 3rem;
+}
+
+
+  .right .profile{
+    position: absolute;
+    left: 70%;
+  }
+
+  .right .top .theme-toggler{
+    width: 4.4rem;
+    position: absolute;
+    left: 50%;
+  }
+   .right .profile .info{
+    display: none;
+   }
+
+   .right .top button{
+     display: inline-block;
+     background: transparent;
+     cursor: pointer;
+     color: black;
+     position: absolute;
+     left: 1rem;
+
+   }
+   .right .recent_order{
+    padding: 0 30px;
+   }
+   .right .recent_updates{
+    padding: 0 40px;
+   }
+   .right .sales-analytics{
+    padding: 0 40px;
+   }
+   .right .add_product{
+    padding: 0 40px;
+    margin-bottom: 40px;
+   }
+
+
+}
